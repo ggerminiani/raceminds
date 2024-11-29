@@ -18,7 +18,7 @@
  - 2 Suportes para 4 Pilhas Aaa Canoa;
  - 1 Conector de Bateria 9V para P4 (macho);
  - 1 Conector rabicho P4 (fêmea);
- - Materiais eletrônicos (cabos, tubos termo retráteis, solda, etc);
+ - Materiais eletrônicos e diversos (placas PCBs, bornes, cabos, tubos termo retráteis, solda, etc);
 
 **Energização:**
 A alimentação do Arduino e da Ponte H foram realizadas de forma independentes, para que os motores não tenham perda de corrente e afete seu desempenho.
@@ -26,9 +26,9 @@ A alimentação do Arduino e da Ponte H foram realizadas de forma independentes,
   - Para a ponte H, utilizado os 2 suportes de pilhas AAA, intermediados por chave de 3 posições, podendo ser alternado entre 6 e 12V;
 
 **Funcionamento:**
-Dois sensores ultrassônicos, cada um posicionado para um lado, são feitas as medições laterais tendo compreendendo da posição do carro para ajustá-lo ao centro da pista.
-O sensor central fica variando sua posição através de uma movimentação repetitiva, realizada pelo servo motor. Ajustado para uma angulação próxima de 120º, o sensor frontal identifica qual se há e qual a proximidade do mesmo em relação à alguma curva.
-Tendo as medidas coletadas pelos sensores, através do código, são feitas tomadas de decisões para que o carro siga em frente, faça curva, dê ré ou até mesmo faça rotações em torno do próprio eixo, através de instruções comandadas pela Ponte H.
-LEDs foram utilizados para realizar a Human Interface Machine (HIM) - interface homem máquina -, e então o usuário possa ter um guia visual de qual *sensor possui menor distância* em relação a alguma borda (LEDs verdes).
-Dê início, ao ligar as chaves (Arduino e Ponte H), o programa leva 10 segundos para fazer uma varredura consistente sobre as informações iniciais (distâncias), durante este tempo, o LED HIM (azul) fica piscando para informar que o código está em período de inicialização. Após esse tempo, o led estabiliza, deixando indicado que pode iniciar o percurso, podendo ser *"startado"* ao clique no push button.
+Dois sensores ultrassônicos, cada um posicionado para um lado, realizam as medições laterais servindo para auxiliar e ajustá-lo ao centro da pista.
+O sensor central fica variando sua posição através de uma movimentação contínua e repetitiva, realizada pelo servo motor. Ajustado para uma angulação próxima de 120º, o sensor frontal identifica se há e qual a proximidade do carro em relação à alguma curva e/ou borda.
+Tendo as medidas coletadas pelos sensores, mediadas por condições, são feitas tomadas de decisões para que o carro siga em frente, faça curva, dê ré ou até mesmo faça rotações em torno do próprio eixo, através de instruções comandadas pela Ponte H.
+LEDs foram utilizados para realizar a Human Interface Machine (HIM) - interface homem máquina -, e então permite que o usuário possa ter um guia visual de qual *sensor possui menor distância* em relação a alguma borda (indicação feita pelos LEDs verdes).
+Dê início, ao ligar as chaves (Arduino e Ponte H), o programa leva 10 segundos para fazer uma varredura consistente sobre as informações iniciais (distâncias), durante este tempo, o LED (azul) fica piscando para informar que o código está em período de inicialização. Após esse tempo, o led estabiliza, deixando indicado que o usuário pode iniciar o percurso, podendo ser *"startado"* ao clique do push button.
 O push button, após acionado, se pressionado outras vezes, alterna o código entre *"PLAY"* e *"PAUSE"*.
