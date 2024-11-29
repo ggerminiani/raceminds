@@ -18,6 +18,7 @@
  - 2 Suportes para 4 Pilhas Aaa Canoa;
  - 1 Conector de Bateria 9V para P4 (macho);
  - 1 Conector rabicho P4 (fêmea);
+ - Materiais eletrônicos (cabos, tubos termo retráteis, solda, etc);
 
 **Energização:**
 A alimentação do Arduino e da Ponte H foram realizadas de forma independentes, para que os motores não tenham perda de corrente e afete seu desempenho.
